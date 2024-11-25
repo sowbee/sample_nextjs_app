@@ -1,10 +1,13 @@
 export default function ReviewCard({ review }) {
-    return (
-      <div className="bg-white p-4 rounded-lg shadow-lg max-w-sm text-center">
-        <h4 className="font-bold mb-2">{review.name}</h4>
-        <p className="mb-4 text-gray-700">{review.review}</p>
-        <div className="text-yellow-500 text-xl">{'★'.repeat(review.rating)}</div>
+  return (
+    <div className="w-full sm:w-[250px] md:w-[300px] lg:w-[300px] h-[250px] bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+      <div className="flex-grow">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          {review.name}
+        </h3>
+        <p className="text-yellow-400 mb-2">{"⭐".repeat(review.rating)}</p>
+        <p className="text-gray-600 h-[120px] overflow-auto">{review.review}</p>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

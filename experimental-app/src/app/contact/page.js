@@ -6,12 +6,12 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    query: "", // Added for the query text box
+    query: "", 
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const characterLimit = 200; // Set the character limit for the text box
+  const characterLimit = 200; 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -145,8 +145,6 @@ export default function ContactPage() {
                   <p className="text-red-500 text-xs">{errors.phone}</p>
                 )}
               </div>
-
-              {/* Number of People Field */}
 
               {/* Query Text Box with Character Limit */}
               <div>

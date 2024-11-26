@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Destination from "../components/Destination";
 export default function AboutPage() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -60,7 +59,7 @@ export default function AboutPage() {
             <div className="lg:w-1/2">
               <div className="w-full h-80 relative">
                 <img
-                  src="/bgImage.jpeg" // Path to the static image
+                  src="/bgImage.jpeg"
                   alt="Static Background Image"
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -69,7 +68,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <Destination/>
+      <Destination />
     </div>
   );
 }

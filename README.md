@@ -1,6 +1,7 @@
 # Traveler Explorer
 
-Welcome to the **Traveler Explorer** project! This is a web application built with **Next.js** and **Tailwind CSS** to help users explore countries and destinations around the world. The app integrates a public API to display information about different countries, including their details and relevant data.
+Welcome to the **Traveler Explorer** project! This is a web application built with **Next.js** and **Tailwind CSS** to help users explore countries and destinations around the world. 
+The app integrates a **public GraphQL API** to display information about different countries, including their details and relevant data.
 
 ## Table of Contents
 
@@ -40,8 +41,10 @@ To get started with the project, follow these steps:
 After the installation, you can:
 
 - Visit the homepage to explore different countries.
-- Search for specific countries or explore random destinations.
+-click on any country card for specific country details.
 - View detailed country information, including facts, flags, and more.
+-Navigate to Home,About,Contact by clicking on respective buttons.
+- click of 'get in touch' will direct to contact page. 
 
 ## Project Structure
 
@@ -72,7 +75,7 @@ BIA
 │   ├── layout.js
 │   └── page.js
 │   ├── lib
-│   │     └── apolloClient.js 
+│   │     └── apolloClient.js       <--**Apollo Client** to manage GraphQL data fetching and caching
 ├── .eslintrc.json
 ├── .gitignore
 ├── jsconfig.json
@@ -97,15 +100,28 @@ BIA
 - **globals.css**: Global styles for the project.
 - **layout.js**: Layout wrapper for the entire app.
 - **page.js**: The main entry page for the app.
-
+  
 ## API Integration
 
-This project integrates with the **Countries API** to fetch and display information about countries around the world.
+This project fetches data from a **public GraphQL API** to display information about countries. We use **Apollo Client** to manage the data fetching and caching.
 
-### API Endpoint
+### Public API
 
-The API used in the project is:
-- [Countries API URL](https://countries.trevorblades.com)
+The app integrates with the [Countries GraphQL API](https://countries.trevorblades.com), which provides country information such as names, codes, and other related data.
+
+#### Available Query:
+- **Countries Query**: Fetches a list of all countries with their name and code.
+
+  Example GraphQL query:
+  
+  ```graphql
+  query {
+    countries {
+      name
+      code
+    }
+  }
+
 
 The Home page and Countries[code] components fetch data from this API and display detailed information about each country, including country names, flags, and more.
 

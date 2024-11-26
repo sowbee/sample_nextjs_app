@@ -26,28 +26,37 @@ const GET_COUNTRIES = gql`
 
 const reviews = [
   {
-    name: "John Doe",
+    name: "Harshi",
     rating: 5,
-    review: "Amazing experience, highly recommended!",
+    review: "A truly unforgettable experience! The service was exceptional, and I felt completely taken care of.",
   },
-  { name: "Jane Smith", rating: 4, review: "Great service, will visit again!" },
+  {
+    name: "Ayshu",
+    rating: 4,
+    review: "Wonderful service! I had a memorable time and will definitely be coming back for more adventures.",
+  },
   {
     name: "Arjun",
     rating: 4,
-    review: "Good service by them.I would like to travel more places with them",
+    review: "The trip was well-organized, and the team did a great job. Looking forward to exploring more with them!",
   },
   {
-    name: "John Doe",
+    name: "Vidya",
     rating: 5,
-    review: "Amazing experience, highly recommended!",
+    review: "An absolute delight! Everything from start to finish was perfect, highly recommend to anyone looking for a great trip.",
   },
-  { name: "Jane Smith", rating: 4, review: "Great service, will visit again!" },
   {
-    name: "Arjun",
+    name: "Puppy",
     rating: 4,
-    review: "Good service by them.I would like to travel more places with them",
+    review: "Great experience! The trip was smooth, and the staff made sure everything was taken care of. I would definitely travel with them again.",
+  },
+  {
+    name: "Arnold",
+    rating: 4,
+    review: "The journey was well-planned, and I had a fantastic time. I would definitely look into future trips with them.",
   },
 ];
+
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_COUNTRIES, { client });

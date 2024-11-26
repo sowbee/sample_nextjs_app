@@ -55,7 +55,14 @@ export default function CountryPage() {
   if (error) return <p>Error fetching data: {error.message}</p>;
   if (!data || !data.country) return <div>No country found for code: {code}</div>;
 
-  const { name } = data.country;
+  const { 
+    name, 
+    native, 
+    phone, 
+    languages, 
+    currency, 
+    continent, 
+  } = data.country;
 
   return (
     <div
@@ -69,8 +76,15 @@ export default function CountryPage() {
       <div className="bg-black bg-opacity-50 text-center py-12">
         <h1 className="text-4xl font-bold text-white">{name}</h1>
         <p className="text-lg text-gray-200 mt-4">
-          Explore the beauty and wonders of {name}.
-        </p>
+  {`Embark on an unforgettable adventure to uncover the beauty and charm of ${name}, a land with the prestigious code ${code}, 
+  also known as ${native} in its native tongue. Prepare to dial in as you discover the rich history and culture of this vibrant nation, 
+  where the phone code is ${phone}, connecting you to its heart. The official languages spoken in ${name}, including ${languages.map((lang) => lang.name).join(", ")}, 
+  weave together a fascinating tapestry that reflects the country's diverse cultural heritage. 
+  The currency of ${name}, ${currency}, tells the story of its flourishing economy and dynamic growth. 
+  Nestled in the heart of the majestic ${continent.name} continent, ${name} is a stunning blend of natural beauty, modern marvels, and timeless traditions. 
+  This remarkable country proudly carries the code ${code}, solidifying its place on the world stage with a unique identity that is as rich as its history.`}
+</p>
+
       </div>
 
       {/* Explore Section */}

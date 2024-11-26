@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Services from "../components/Services";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -75,9 +76,10 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-12">
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">
               Our Office
             </h2>
+            <div className="mt-5 text-center">
             <p className="text-lg text-gray-700">
               123 Travel St, Adventure City, ABC 12345
             </p>
@@ -87,6 +89,10 @@ export default function ContactPage() {
             <p className="text-lg text-gray-700 mt-2">
               <strong>Email: </strong>contact@travelexplorer.com
             </p>
+            </div>
+            
+            <div className="mt-1">    <Services/></div>
+         
           </div>
 
           {/* Contact Form */}
